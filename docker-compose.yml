@@ -109,7 +109,7 @@ services:
     environment:
     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
-    - AIRFLOW__CORE__FERNET_KEY=46ExudM4L-1ChR3C_q6pI71ne8eBne6T498zU-C23e4=
+    - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
     - AIRFLOW__CORE__LOAD_EXAMPLES=False
     entrypoint: /bin/bash
     command: -c "airflow db init && airflow users create --username admin --firstname
@@ -131,7 +131,7 @@ services:
     environment:
     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
-    - AIRFLOW__CORE__FERNET_KEY=46ExudM4L-1ChR3C_q6pI71ne8eBne6T498zU-C23e4=
+    - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
     - AIRFLOW__CORE__LOAD_EXAMPLES=False
     ports:
     - 8085:8080
@@ -154,7 +154,7 @@ services:
     environment:
     - AIRFLOW__CORE__EXECUTOR=LocalExecutor
     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
-    - AIRFLOW__CORE__FERNET_KEY=46ExudM4L-1ChR3C_q6pI71ne8eBne6T498zU-C23e4=
+    - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
     - AIRFLOW__CORE__LOAD_EXAMPLES=False
     volumes:
     - ./dags:/opt/airflow/dags
