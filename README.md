@@ -142,4 +142,4 @@ Data quality validations are built into the Silver/Gold PySpark pipelines and Ai
 Developed as a Data Engineering showcase project applying enterprise-grade pipeline practices, modern DevOps, and AI-assisted engineering methodologies.
 
 ---
-*Created by [Your Name] — Senior Data Engineer Candidate*
+*Created by Alberto A. Linares López — Junior Data Engineer Candidate*
