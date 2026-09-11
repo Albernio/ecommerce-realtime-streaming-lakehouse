@@ -53,13 +53,13 @@ def generate_event() -> dict:
     event_type = random.choices(EVENT_TYPES, weights=EVENT_WEIGHTS, k=1)
     
     # Assign monetary amount based on event intent
-    amount = product["price"] if event_type in ["purchase", "add_to_cart"] else 0.0
+    amount = product["price"] if event_type[0] in ["purchase", "add_to_cart"] else 0.0
 
     return {
         "event_id": str(uuid.uuid4()),
         "user_id": f"usr_{random.randint(1000, 1050)}",  # Sample pool of 50 recurring users
         "session_id": str(uuid.uuid4())[:8],
-        "event_type": event_type,
+        "event_type": event_type[0],
         "item_id": product["item_id"],
         "item_name": product["name"],
         "category": category,
