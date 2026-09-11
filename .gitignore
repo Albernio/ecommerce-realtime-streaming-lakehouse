@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Temporarily ignore localstack data directory to avoid committing large files
+/localstack_data
